@@ -16,11 +16,6 @@ pipeline{
                 bat 'terraform apply -var="name=%bucket%" --auto-approve'
             }
         }
-        
-        stage('Terraform remove state'){
-            steps{
-                bat 'terraform state rm "aws_s3_bucket.first5"'
-            }
-        }
+ 
     }
 }
